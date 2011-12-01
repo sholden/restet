@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Scott Holden"]
   s.email       = ["scott@sshconnection.com"]
   s.homepage    = ""
-  s.summary     = %q{A RESTful API exposing LibPDF TET functionality}
+  s.summary     = %q{A RESTful API exposing PDFlib TET functionality}
   s.description = %q{Provides a very simple extraction resource for extracing text from slices of a PDF.}
 
   s.rubyforge_project = "restet"
