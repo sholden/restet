@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.name        = "restet"
   s.version     = Restet::VERSION
   s.authors     = ["Scott Holden"]
-  s.email       = ["scott@sshconnection.com"]
-  s.homepage    = ""
+  s.email       = ["ssh@sshconnection.com"]
+  s.homepage    = "http://github.com/sholden/restet"
   s.summary     = %q{A RESTful API exposing PDFlib TET functionality}
   s.description = %q{Provides a very simple extraction resource for extracing text from slices of a PDF.}
 
