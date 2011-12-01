@@ -5,6 +5,10 @@ module Restet
     require 'restet/server/command'
     dir = File.dirname(File.expand_path(__FILE__))
     
+    get '/version' do
+      Restet::VERSION
+    end
+    
     post '/extractions' do
       slices = JSON.parse(params[:extraction])
       extractions = {}

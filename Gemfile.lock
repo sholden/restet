@@ -10,7 +10,6 @@ PATH
 GEM
   remote: http://rubygems.org/
   specs:
-    leftright (0.9.1)
     multipart-post (1.1.4)
     rack (1.3.5)
     rack-protection (1.1.4)
@@ -28,5 +27,4 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  leftright
   restet!
