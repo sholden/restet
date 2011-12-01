@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__) + '/../lib')
+
+require 'restet'
+require 'restet/client'
+require 'uri'
+
+filename = ARGV[0]
+
+def get_restet_uri_string
+  return ENV['RESTET_URI'] if ENV['RESTET_URI']
+  return File.read('~/.restet').strip if File.exist?('~/.restet')
+  'http://localhost:5679/extractions'
+end
+
+abort unless File.exist?(filename)
+
+File.open(filename) do |file|
+  client = Restet::Client.new(URI.parse(get_restet_uri_string))
+  extraction = client.extract(file) do |params|
+    params.slice :slice, [ARGV[1], ARGV[2]], [ARGV[3], ARGV[4]]
+  end
+  puts extraction[:slice]
+end
