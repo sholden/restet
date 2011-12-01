@@ -1,0 +1,6 @@
+This is currently a very basic way to expose PDFlib TET cli functions.  
+
+Right now, I only need a small subset of features, but as I need more I will implement additional
+extraction parameters and resources.
+
+TET can be found here: http://www.pdflib.com/products/tet/
